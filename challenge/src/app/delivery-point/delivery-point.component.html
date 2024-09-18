@@ -1,0 +1,8 @@
+<div>
+    <h6>Pedidos Listos para entregar</h6>
+    <ul>
+        @for (pedido of pedidosEntregar; track $index) {
+            <li>{{pedido.number}} - {{pedido.name}} <button>Entregar</button></li>
+        }
+    </ul>
+</div>

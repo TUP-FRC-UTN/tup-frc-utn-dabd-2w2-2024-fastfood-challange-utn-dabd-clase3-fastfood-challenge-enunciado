@@ -1,0 +1,32 @@
+
+<div class="">
+    <div class="">
+        <h6>Pedientes de Cocinar</h6>
+        @if(pedidosxCocinar.length > 0){      
+            <ul>
+                @for (pedido of pedidosxCocinar; track $index) {
+                <li>({{pedido.number}}) - {{pedido.description}} - <button [disabled]="pedidosCocinados.length > 0" (click)="cocinarPedido(pedido)" >Cocinar</button></li>
+                }
+            </ul>
+            
+        }
+    </div>
+    <div class="">
+        <h6>Pedidos en Cocción</h6>
+        @if(pedidosCocinados.length > 0){
+            <ul>
+                @for(pedido of pedidosCocinados; track $index){
+                    <li>({{pedido.number}}) - {{pedido.description}}</li>
+                }
+            </ul>
+        }
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <button [disabled]="pedidosCocinados.length === 0" class="btn btn-outline-primary" (click)="terminarPedido()">Pedido Terminado!</button>
+        </div>
+        
+    </div>
+    
+</div>
+
