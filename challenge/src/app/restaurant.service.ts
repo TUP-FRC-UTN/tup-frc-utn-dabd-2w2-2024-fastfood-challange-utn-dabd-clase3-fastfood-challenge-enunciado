@@ -47,4 +47,10 @@ export class RestaurantService {
   terminarPedido(pedido : Pedido ){
     this.pedidosxEntregar.push(pedido)
   }
+
+  entregarPedido( index : number){
+
+    this.pedidosxEntregar.splice(index,1);
+    
+  }
 }

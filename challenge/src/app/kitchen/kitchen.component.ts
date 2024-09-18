@@ -45,4 +45,6 @@ export class KitchenComponent {
     this.service.terminarPedido(pedido!);
   }
 
+
+
 }

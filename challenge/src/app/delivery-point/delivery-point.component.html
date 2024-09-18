@@ -2,7 +2,7 @@
     <h6>Pedidos Listos para entregar</h6>
     <ul>
         @for (pedido of pedidosEntregar; track $index) {
-            <li>{{pedido.number}} - {{pedido.name}} <button>Entregar</button></li>
+            <li>{{pedido.number}} - {{pedido.name}} <button (click)="EntregarPedido($index)">Entregar</button></li>
         }
     </ul>
 </div>

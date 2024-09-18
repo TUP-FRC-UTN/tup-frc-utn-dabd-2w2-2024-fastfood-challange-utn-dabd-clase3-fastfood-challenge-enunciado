@@ -22,4 +22,8 @@ export class DeliveryPointComponent {
   cargarPedidos(){
     this.pedidosEntregar = this.service.getPedidosAEntregar();
   }
+
+  EntregarPedido(index : number){
+    this.service.entregarPedido(index);
+  }
 }
