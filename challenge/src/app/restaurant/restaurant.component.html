@@ -1,0 +1,13 @@
+<div>
+    <h1>Restaurat FastFood</h1>
+    
+    @if (listaPedidos.length > 0) {
+        <h6>Pedidos Ingresados:</h6>
+        <p>{{listaPedidos|json}}</p>       
+    }    
+    
+    <app-delivery-point></app-delivery-point>
+    <app-pos></app-pos>
+    <app-kitchen></app-kitchen>
+
+</div>

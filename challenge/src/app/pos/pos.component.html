@@ -1,0 +1,29 @@
+<form #form="ngForm" (ngSubmit)="sendPedido(form)" class="row g-3 container">
+    <h1>Pedidos</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nombre:</label>
+            <input #nombre="ngModel"
+                
+                type="text" class="form-control" name="nombre" [(ngModel)]="pedido.name" >
+            @if(nombre.invalid && (nombre.dirty || nombre.touched)){
+            @if(nombre.getError('required')) {
+            <div class="text-danger">El nombre es obligatorio</div>
+            }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Pedido:</label>
+            <input #description="ngModel" type="text" class="form-control" name="description" [(ngModel)]="pedido.description"
+                required>
+            <!-- @if(description.getError('required') && description.dirty){
+            <div class="text-danger">El Pedido es obligatorio.</div>
+            } -->
+        </div>
+    </div>    
+    
+    <div>
+        <button type="submit" class="btn btn-primary">Ordenar</button>
+    </div>
+</form>
