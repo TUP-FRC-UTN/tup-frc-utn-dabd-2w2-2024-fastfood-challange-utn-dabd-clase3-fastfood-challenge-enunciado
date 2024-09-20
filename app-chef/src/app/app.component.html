@@ -1,1 +1,4 @@
-<app-restaurant></app-restaurant>
+<app-restaurant (salida)="aumentarContador()" [entrada]="contador"></app-restaurant>
+<app-delivery (salida)="aumentarContador()" [entrada]="contador"></app-delivery>
+<app-pos (salidaP)="aumentarContador()" [entrada]="contador"></app-pos>
+<app-kitchen (salida)="aumentarContador()" [entrada]="contador"></app-kitchen>

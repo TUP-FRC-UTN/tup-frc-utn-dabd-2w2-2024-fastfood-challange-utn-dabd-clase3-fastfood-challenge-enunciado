@@ -12,7 +12,7 @@ import { RestaurantServiceService } from '../services/restaurant-service.service
 export class RestaurantComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes['entradaP']){
+    if(changes['entrada']){
       this.cargarPedidosDone();
       this.cargarPedidosNotDone();
     }
@@ -20,7 +20,7 @@ export class RestaurantComponent implements OnChanges {
   pedidosDone:order[] = [];
   pedidosNotDone:order[] = [];
   pedidoService = inject(RestaurantServiceService)
-  order : order | any;
+  //order : order | any;
 
   @Output() salida = new EventEmitter<number>();
   @Input() entrada = 0;

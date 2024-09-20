@@ -1,1 +1,11 @@
-<p>delivery works!</p>
+<div class="m-2">
+    <p>Pedidos listos para entregar:</p>
+    <div class="row">
+        <ul>
+            @for(order of ordersToDelivered;track $index){
+                <li>{{order.number}} - {{order.description}}</li>
+                <button type="button" (click)="entregarOrden($index)">Entregar</button>
+            }
+        </ul>
+    </div>
+</div>
